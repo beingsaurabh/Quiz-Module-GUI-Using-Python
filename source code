@@ -1,0 +1,271 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Nov 10 12:34:17 2019
+
+@author: Saurabh Tripathi
+"""
+
+def click_submit(self):
+    
+    def click_end(self):
+        root.destroy()
+        result = tkinter.Tk()
+        result.title('Result')
+        result.geometry('400x300')
+
+        title2=Label(result,text="Result",font="Helvetica 30 bold italic",bg="yellow",fg="blue",width=16)
+        title2.grid(row=0,column=0,columnspan=2,padx=5)
+        
+        title4=Label(result,text="Name",font="times 12 bold ")
+        title4.grid(row=1,column=0,sticky=E,pady=5)
+        
+        title8=Label(result,text=':  '+x,font="verdana 11 bold ")
+        title8.grid(row=1,column=1,sticky=W,pady=5)
+        
+        title5=Label(result,text="Registration No.",font="times 12 bold ")
+        title5.grid(row=2,column=0,sticky=E,pady=5)
+        
+        title9=Label(result,text=':  '+y,font="verdana 11 bold ")
+        title9.grid(row=2,column=1,sticky=W,pady=5)
+        
+        title3=Label(result,text="Score  : "+str(sum(correct_list))+"/100",font="times 36 bold ")
+        title3.grid(row=3,column=0,columnspan=2,pady=5)
+
+        title6=Label(result,text=str(sum(correct_list)//10)+"  Correct",font="verdana 15 bold ",bg="lightgreen",width=14)
+        title6.grid(row=4,column=0,sticky=W,pady=5)
+        
+        title7=Label(result,text=str(10-sum(correct_list)//10)+" Incorrect",font="verdana 15 bold ",bg="red",width=14)
+        title7.grid(row=4,column=1,sticky=E,pady=5)
+        
+        close_button=Button(result,text="Close",font="times 20",bg="gray",bd=2,width=24,command=result.destroy)
+        close_button.grid(row=5,column=0,columnspan=2,padx=5)
+
+        result.mainloop()
+        
+    x=E1.get()
+    y=E2.get()
+    z=E3.get()
+    l=v.get()
+    if(l==1 or l==2 or l==3):
+        q=list()
+        q.append("Which is the correct operator for x power y?")
+        q.append("Which of these in not a core data type?")
+        q.append("What is the return type of function id?")
+        q.append("The output of executing string.ascii_letters can also be achieved by:")
+        q.append("What arithmetic operators cannot be used with strings?")
+        q.append("What will be the output of the “hello”+1+2+3?")
+        q.append("What will be displayed by print(ord(‘b’) – ord(‘a’))?")
+        q.append("list1 is [3, 4, 5, 20, 5, 25, 1, 3], what is list1 after list1.reverse()?")
+        q.append("What is returned by math.ceil(3.4)?")
+        q.append(" s=”hello” what will be the return value of type(s)?")
+
+        l1=list()
+        l1.append("x^y")
+        l1.append("x**y")
+        l1.append("x^^y")
+        l1.append("None of the mentioned")
+    
+        l2=list()
+        l2.append("Lists")
+        l2.append("Dictionary")
+        l2.append("Tuples")
+        l2.append("Class")
+        
+        l3=list()
+        l3.append("int")
+        l3.append("float")
+        l3.append("bool")
+        l3.append("dict")
+        
+        l4=list()
+        l4.append("string.ascii_lowercase_string.digits")
+        l4.append("string.ascii_lowercase+string.ascii_upercase")
+        l4.append("string.letters")
+        l4.append("string.lowercase_string.upercase")
+      
+        l5=list()
+        l5.append("+")
+        l5.append("*")
+        l5.append("-")
+        l5.append("All of the mentioned")
+
+        l6=list()
+        l6.append("hello123")
+        l6.append("hello")
+        l6.append("Error")
+        l6.append("hello6")
+
+        l7=list()
+        l7.append("0")
+        l7.append("1")
+        l7.append("-1")
+        l7.append("2")
+
+
+        l8=list()
+        l8.append("[3, 4, 5, 20, 5, 25, 1, 3]")
+        l8.append("[1, 3, 3, 4, 5, 5, 20, 25]")
+        l8.append("[25, 20, 5, 5, 4, 3, 3, 1]")
+        l8.append("[3, 1, 25, 5, 20, 5, 4, 3]")
+
+
+        l9=list()
+        l9.append("3")
+        l9.append("4")
+        l9.append("4.0")
+        l9.append("3.0")
+
+        l10=list()
+        l10.append("int")
+        l10.append("bool")
+        l10.append("str")
+        l10.append("string")
+    
+        o=[l1,l2,l3,l4,l5,l6,l7,l8,l9,l10]
+        answer=[2,4,1,2,3,1,2,4,4,4]
+        
+    top.destroy()
+    root = tkinter.Tk()
+    root.title('QUESTION BANK')
+    root.geometry('600x400')
+
+    title1=Label(root,text="QUESTION BANK",font="Helvetica 20 bold italic",bg="yellow",width=600,fg="blue")
+    title1.pack()
+
+    text1=Text(root,width=200,height=3,font="times 11 bold")
+    text1.pack(anchor=W)
+
+    text1.insert(END,'\n         Welcome "'+x+'"')
+    
+    def next_command():
+        global count
+        if(count<=8):
+            count+=1
+            text2.delete(1.0,END)
+            text2.insert(END,q[count])
+        
+            R4["text"]=o[count][0]
+            R5["text"]=o[count][1]
+            R6["text"]=o[count][2]
+            R7["text"]=o[count][3]
+            
+            L5["text"]="Question "+str(count+1)
+            
+    def previous_command():
+        global count
+        if(count>=1):
+            count-=1
+            text2.delete(1.0,END)
+            text2.insert(END,q[count])
+        
+            R4["text"]=o[count][0]
+            R5["text"]=o[count][1]
+            R6["text"]=o[count][2]
+            R7["text"]=o[count][3]
+            
+            L5["text"]="Question "+str(count+1)
+            
+    def save_command():
+        if(ans.get()==answer[count]):
+            correct_list[count]=10
+
+    global count,correct_list
+    correct_list=[0,0,0,0,0,0,0,0,0,0]
+    count=0
+    def question_frame(count):
+        frame2=Frame(root,height=200,width=600)
+        frame2.propagate(0)
+        global text2,R4,R5,R6,R7,L5,ans
+
+        L5 = Label(frame2, text="Question 1",font="times 11 bold")
+        L5.grid(row=0,column=0,sticky=W,pady=2,padx=10)
+
+        text2=Text(frame2,width=69,height=3,bg='lightgreen',font="times 11")
+        text2.grid(row=0,column=1,sticky=W,pady=2,columnspan=2)
+
+        text2.insert(END,q[count])
+        
+        ans=IntVar(0)
+        
+        R4 = Radiobutton(frame2, text=o[count][0],font="verdana 11",variable=ans,value=1)
+        R4.grid(row=1,column=1,sticky=W)
+
+        R5 = Radiobutton(frame2, text=o[count][1],font="verdana 11",variable=ans,value=2)
+        R5.grid(row=2,column=1,sticky=W)
+
+        R6 = Radiobutton(frame2, text=o[count][2],font="verdana 11",variable=ans,value=3)
+        R6.grid(row=3,column=1,sticky=W)
+
+        R7 = Radiobutton(frame2, text=o[count][3],font="verdana 11",variable=ans,value=4)
+        R7.grid(row=4,column=1,sticky=W)
+
+        previous_button=Button(frame2,text="Previous",font="Helvetica 14",bg="green",bd=2,width=8,command=previous_command)
+        previous_button.grid(row=5,column=1,sticky=W,padx=20,pady=10)
+
+        save_button=Button(frame2,text="Save",font="Helvetica 14",bg="green",bd=2,width=8,command=save_command)
+        save_button.grid(row=5,column=2,sticky=E,padx=20,pady=10)
+
+        next_button=Button(frame2,text="Next",font="Helvetica 14",bg="green",bd=2,width=8,command=next_command)
+        next_button.grid(row=6,column=1,sticky=W,padx=20,pady=10)
+
+        end_button=Button(frame2,text="END",font="Helvetica 14",bg="green",bd=2,width=8)
+        end_button.grid(row=6,column=2,sticky=E,padx=20,pady=10)
+        end_button.bind('<Button-1>',click_end)
+    #end_button.configure(command=lambda:root.destroy)
+        frame2.pack()
+    question_frame(count)
+    root.mainloop()
+
+
+    
+import tkinter
+from tkinter import *
+top = tkinter.Tk()
+top.title('QUIZ MODULE')
+top.geometry('400x300')
+
+title=Label(top,text="QUIZ",font="Helvetica 30 bold italic",bg="yellow",width=300,fg="blue")
+title.pack()
+
+frame1=Frame(top,height=300,width=300)
+frame1.propagate(0)
+L1 = Label(frame1, text="Name",font="times 16 bold")
+L1.grid(row=0,column=0,sticky=W,pady=2)
+
+E1 = Entry(frame1, bd =2,width=24,font="verdana 12")
+E1.grid(row=0,column=1,sticky=W,pady=2)
+
+L2 = Label(frame1, text="Registration No.",font="times 16 bold")
+L2.grid(row=1,column=0,sticky=W,pady=2)
+
+E2 = Entry(frame1, bd =2,width=24,font="verdana 12")
+E2.grid(row=1,column=1,sticky=W,pady=2)
+
+
+L3 = Label(frame1, text="Section",font="times 16 bold")
+L3.grid(row=2,column=0,sticky=W,pady=2)
+
+E3 = Entry(frame1, bd =2,width=24,font="verdana 12")
+E3.grid(row=2,column=1,sticky=W,pady=2)
+
+L4= Label(frame1, text="Level",font="times 16 bold")
+L4.grid(row=3,column=0,sticky=W,pady=2)
+
+v=IntVar()
+R1 = Radiobutton(frame1, text="Easy",font="verdana 11",variable=v,value=1)
+R1.grid(row=3,column=1,sticky=W)
+
+R2 = Radiobutton(frame1, text="Moderate",font="verdana 11",variable=v,value=2)
+R2.grid(row=4,column=1,sticky=W)
+
+R3 = Radiobutton(frame1, text="Tough",font="verdana 11",variable=v,value=3)
+R3.grid(row=5,column=1,sticky=W)
+
+submit_button=Button(frame1,text="Submit",font="Helvetica 17",bg="green",bd=2)
+submit_button.grid(row=6,column=1,sticky=E,padx=40)
+submit_button.bind('<Button-1>',click_submit)
+
+frame1.pack(anchor=W)
+
+top.mainloop()
+
