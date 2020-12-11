@@ -4,7 +4,7 @@ Quiz Module in python using GUI. This system contains particularly 3 modules ,na
 1.Login Here
 
 
-![](https://github.com/beingsaurabh/Quiz-Module-GUI-Using-Python/blob/master/question.png)
+![](https://github.com/beingsaurabh/Quiz-Module-GUI-Using-Python/blob/master/login.png)
 
 2. Attempt Questions
 
