@@ -1,4 +1,4 @@
-# Quiz-Module-in-python-using-GUI
+# Quiz-Module-GUI-Using-Python
 Quiz Module in python using GUI. This system contains particularly 3 modules ,namely Login,Questions and Score.
 
 1.Login Here
